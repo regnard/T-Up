@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LafargeHolcim</title>
+    <link rel="stylesheet" href="../../../../resources/static/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../../../resources/static/datatables/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="../../../../resources/static/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/Footer-Dark.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/Navigation-with-Button1.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/DirectA.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/LafargeHolcim-CA.css" />
+    <link rel="icon" type="image/x-icon" href="../../../../resources/static/l-favicon_6.ico" />
+    <script src="../../../../resources/static/datatables/js/processing().js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+
+    <th:block th:fragment="htmlHeader">
+        <meta th:name="_csrf" th:content="${_csrf.token}" />
+        <meta th:name="_csrf_header" th:content="${_csrf.headerName}" />
+        <title th:text="#{title.order.newOrder}">DirectA - New Order</title>
+    </th:block>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-default navigation-clean-button">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="../../../../resources/static/img/directa-logo.png" alt="DirectA" id="lh-logo" /></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav"></ul>
+                    <p class="navbar-text navbar-right actions"> </p>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div th:fragment="content">
+        <div id="lh-band" role="banner">
+            <div class="container" id="content-block">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <h2 id="page-title">New Order</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div th:replace="fragments/common :: userShipToOptions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="fragments/common :: message-box"></div>
+
+        <div class="container content-page" role="main" id="maincontent" tabindex="-1">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Create New Order</h3>
+                    <div class="panel panel-default">
+                                         
+                    </div>                 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../../resources/static/js/jquery.min.js"></script>
+    <script src="../../../../resources/static/js/script.min.js"></script>
+    <script src="../../../../resources/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../resources/static/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+    <th:block th:fragment="htmlBodyEnd">
+
+    </th:block>
+
+</body>
+
+</html>

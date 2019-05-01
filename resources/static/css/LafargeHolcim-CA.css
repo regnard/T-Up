@@ -1,0 +1,63 @@
+.lh-button:hover {
+    background-color: #1B7C9D;
+    border: 1px solid #1B7C9D;
+}
+
+.lh-button:active:hover {
+    background-color: #1B7C9D;
+    background-image: none;
+    border: 1px solid #1B7C9D;
+}
+
+.lh-button:active:focus {
+    background-image: none;
+    border: 1px solid #1B7C9D;
+}
+
+.lh-button:active {
+    background-image: none;
+    border: 1px solid #1B7C9D;
+}
+
+.lh-button {
+    background-color: #1B7C9D;
+    background-image: none;
+    border: 1px solid #1B7C9D;
+}
+
+.lh-brand {
+    color: #1B7C9D;
+}
+
+a.lh-brand:hover,
+a.lh-brand:focus {
+    color: #1B7C9D;
+}
+
+#bg-container {
+    background-image: url(../img/marilyn.jpg);
+    background-position: center;
+    background-size: auto;
+}
+
+#lh-band {
+    background-color: #1B7C9D;
+    margin-bottom: 20px;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    color: #1B7C9D;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    color: #1B7C9D;
+}
+
+.pagination > .active > a {
+    background-color: #1B7C9D;
+    border-color: #1B7C9D;
+}

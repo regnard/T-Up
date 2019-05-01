@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LafargeHolcim</title>
+    <link rel="stylesheet" href="../../../../resources/static/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css" />
+    <link rel="stylesheet" href="../../../../resources/static/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/Footer-Dark.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/Navigation-with-Button1.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/DirectA.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/LafargeHolcim-CA.css" />
+    <link rel="icon" type="image/x-icon" href="../../../../resources/static/l-favicon_6.ico" />
+    <script src="../../../../resources/static/datatables/js/processing().js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+
+    <th:block th:fragment="htmlHeader">
+        <meta th:name="_csrf" th:content="${_csrf.token}" />
+        <meta th:name="_csrf_header" th:content="${_csrf.headerName}" />
+        <title th:text="#{title.order.newOrder}">DirectA - Product Selection</title>
+    </th:block>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-default navigation-clean-button">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="../../../../resources/static/img/directa-logo.png" alt="DirectA" id="lh-logo" /></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav"></ul>
+                    <p class="navbar-text navbar-right actions"> </p>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div th:fragment="content">
+        <div id="lh-band" role="banner">
+            <div class="container" id="content-block">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <h2 id="page-title">Select Product</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div th:replace="fragments/common :: userShipToOptions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="fragments/common :: message-box"></div>
+
+        <div class="container content-page" role="main" id="maincontent" tabindex="-1">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="small bottom15">Enter the number of loads for each product in your order request. Not seeing the product you want? <a>Call us.</a></p>
+                    <div class="col-md-2 col-sm-12 col-xs-12 text-center">
+                        <div class="product-tile center-block bottom15">
+                            <span class="tile-text">
+                                <div><img src="../../../../resources/static/img/tile-1.png" /></div>
+                                
+                            </span>
+                        </div>
+
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label class="sr-only">Loads:</label>
+                                <div class="input-group input-sm">
+                                    <div class="input-group-addon">Loads: </div>
+                                    <input type="number" class="form-control" step="1" value="0" />
+
+                                </div>
+                            </div>
+                        </form>
+
+
+
+
+                    </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12 text-center">
+                        <div class="product-tile center-block bottom15"> <span class="tile-text">
+                                <div><img src="../../../../resources/static/img/tile-2.png" /></div>
+                            </span></div>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label class="sr-only">Loads:</label>
+                                <div class="input-group input-sm">
+                                    <div class="input-group-addon">Loads: </div>
+                                    <input type="number" class="form-control" step="1" value="0" />
+
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12 text-center">
+                        <div class="product-tile center-block bottom15 "> <span class="tile-text">
+                                <div><img src="../../../../resources/static/img/tile-3.png" /></div>
+                            </span></div>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label class="sr-only">Loads:</label>
+                                <div class="input-group input-sm">
+                                    <div class="input-group-addon">Loads: </div>
+                                    <input type="number" class="form-control" step="1" value="0" />
+
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    
+
+
+                </div>
+                <div class="top30 col-md-12 col-sm-12 col-xs-12 ">
+                    <button class="btn btn-primary lh-button" type="submit">
+                        <span>Continue</span></button> &nbsp;
+                    <button class="btn btn-default" type="button" onclick="self.location='../home';">
+                        <span>Cancel</span></button>
+                </div>
+
+
+                <div class="top30 col-md-8 col-sm-12 col-xs-12 ">
+                    <p>You may also re-order the same items you've made recently:</p>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Recent Orders</div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table id="recent-orders" class="table table-hover table-striped dt-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th class="hidden-xs text-center">Reference #</th>
+                                            <th>Materials and Loads</th>
+                                            <th class="text-right">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12/31/2018</td>
+                                            <td class="hidden-xs text-center">000025925</td>
+                                            <td>2 x Type GU; 2 x Newcem Grade 80</td>
+
+                                            <td class="text-right"><a href="#">Order again</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12/21/2018</td>
+                                            <td class="hidden-xs text-center">000025910</td>
+                                            <td>2 x Type GU; 3 x Newcem Grade 80; 2 x Type GUL</td>
+
+                                            <td class="text-right"><a href="#">Order again</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12/21/2018</td>
+                                            <td class=" hidden-xs text-center">000025910</td>
+                                            <td>2 x Type GU; 3 x Newcem Grade 80</td>
+
+                                            <td class="text-right"><a href="#">Order again</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12/21/2018</td>
+                                            <td class="hidden-xs text-center">000025910</td>
+                                            <td>1 x Type GU; 1 x Type GUL</td>
+
+                                            <td class="text-right"><a href="#">Order again</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12/21/2018</td>
+                                            <td class="hidden-xs text-center">000025910</td>
+                                            <td>5 x Newcem Grade 80</td>
+
+                                            <td class="text-right"><a href="#">Order again</a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <span><a href="#">View all orders</a></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../../resources/static/js/jquery.min.js"></script>
+    <script src="../../../../resources/static/js/script.min.js"></script>
+    <script src="../../../../resources/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+    <th:block th:fragment="htmlBodyEnd">
+        <script>
+            $('#recent-orders').DataTable({
+                "responsive": true,
+                "searching": false,
+                "paging": false,
+                "info": false,
+                "sorting": false,
+                "targets": 'no-sort',
+                "bSort": false,
+                "order": [],
+                
+            
+            });
+
+        </script>
+    </th:block>
+
+</body>
+
+</html>

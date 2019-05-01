@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LafargeHolcim</title>
+    <link rel="stylesheet" href="../../../../resources/static/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css" />
+    <link rel="stylesheet" href="../../../../resources/static/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/Footer-Dark.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/Navigation-with-Button1.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/DirectA.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/LafargeHolcim-CA.css" />
+    <link rel="icon" type="image/x-icon" href="../../../../resources/static/l-favicon_6.ico" />
+    <script src="../../../../resources/static/datatables/js/processing().js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+
+    <th:block th:fragment="htmlHeader">
+        <meta th:name="_csrf" th:content="${_csrf.token}" />
+        <meta th:name="_csrf_header" th:content="${_csrf.headerName}" />
+        <title th:text="#{title.order.newOrder}">DirectA - Order Home</title>
+    </th:block>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-default navigation-clean-button">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="../../../../resources/static/img/directa-logo.png" alt="DirectA" id="lh-logo" /></a>
+
+                </div>
+                <!--<div class="top10 pull-right">
+                        <a href="#" class="lh-brand"><i class="fa fa-shopping-cart fa-2x"></i></a>
+
+                    </div>-->
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav"></ul>
+                    <p class="navbar-text navbar-right actions"> </p>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+    <div th:fragment="content">
+        <div id="lh-band" role="banner">
+            <div class="container" id="content-block">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <h2 id="page-title" th:utext="#{menu.Home}">Home</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div th:replace="fragments/common :: userSoldToOptions"></div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div th:replace="fragments/common :: userShipToOptions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="fragments/common :: message-box"></div>
+
+        <div class="container content-page" role="main" id="maincontent" tabindex="-1">
+
+            <div class="row">
+                <div class=" col-md-3">
+                    <div class="panel panel-default bucket" id="order-today">
+                        <div class="panel-body">
+                            <h6>Today</h6>
+                            <h4>5/10 Delivered</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default bucket" id="order-tomorrow">
+                        <div class="panel-body">
+                            <h6>Tomorrow</h6>
+                            <h4>8/13 Confirmed</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default bucket" id="order-all">
+                        <div class="panel-body">
+                            <h6>All</h6>
+                            <h4>10/20 Confirmed</h4>
+                        </div>
+                    </div>
+                </div>
+                 <div class="top25 col-md-3">
+                   
+                        
+                            <button class="btn btn-primary lh-button btn-block btn-lg " type="submit">
+                                    <span>Order now</span></button>
+                        
+                   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Today
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table id="today" class="table table-hover table-striped dt-responsive" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Order #</th>
+                                            <th>Material</th>
+                                            <th>Status</th>
+                                            <th>Time</th>
+                                            <th>ETA</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1234567890</td>
+                                            <td>Newcem Grade 80</td>
+                                            <td>En Route</td>
+                                            <td>10:00am</td>
+                                            <td>45 minutes</td>
+                                            <td>04/20/2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1234567890</td>
+                                            <td>Newcem Grade 80</td>
+                                            <td>En Route</td>
+                                            <td>10:00am</td>
+                                            <td>45 minutes</td>
+                                            <td>04/20/2019</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>1234567890</td>
+                                            <td>Newcem Grade 80</td>
+                                            <td>En Route</td>
+                                            <td>10:00am</td>
+                                            <td>45 minutes</td>
+                                            <td>04/20/2019</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>1234567890</td>
+                                            <td>Newcem Grade 80</td>
+                                            <td>En Route</td>
+                                            <td>10:00am</td>
+                                            <td>45 minutes</td>
+                                            <td>04/20/2019</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>1234567890</td>
+                                            <td>Newcem Grade 80</td>
+                                            <td>En Route</td>
+                                            <td>10:00am</td>
+                                            <td>45 minutes</td>
+                                            <td>04/20/2019</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../../resources/static/js/jquery.min.js"></script>
+    <script src="../../../../resources/static/js/script.min.js"></script>
+    <script src="../../../../resources/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <th:block th:fragment="htmlBodyEnd">
+        <script>
+            $('#today').DataTable({
+                "responsive": true,
+                "searching": false,
+                "paging": false,
+                "info": false,
+                "sorting": false,
+                "targets": 'no-sort',
+                "bSort": false,
+                "order": [],
+            });
+
+        </script>
+
+    </th:block>
+
+</body>
+
+</html>

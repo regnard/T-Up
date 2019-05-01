@@ -1,0 +1,24 @@
+{
+    "decimal":        "",
+    "emptyTable":     "Aucun résultat",
+    "info":           "Entrées _START_ à _END_ sur _TOTAL_ affichées",
+    "infoEmpty":      "0 à 0 de 0 entrées affichées",
+    "infoFiltered":   "(filtre de _MAX_ d'entrées totales)",
+    "infoPostFix":    "",
+    "thousands":      ",",
+    "lengthMenu":     "Entrées_MENU_ affichées",
+    "loadingRecords": "Chargement...",
+    "processing":     "Traitement...",
+    "search":         "Recherche",
+    "zeroRecords":    "Aucun enregistrement ne correspond à ces critères",
+    "paginate": {
+        "first":      "Premier",
+        "last":       "Dernier",
+        "next":       "Suivant",
+        "previous":   "Précédent"
+    },
+    "aria": {
+        "sortAscending":  ": Activer pour obtenir un tri ascendant",
+        "sortDescending": ": Activer pour obtenir un tri descendant"
+    }
+}
