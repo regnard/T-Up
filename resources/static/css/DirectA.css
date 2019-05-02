@@ -105,17 +105,17 @@ load-input {
 }
 
 #order-today {
-    background-color:  #44878c;
+    background-color:  #e6280f;
     color: #fff;
 }
 
 #order-tomorrow {
-     background-color: #00965f;
+     background-color: #85bc23;
     color: #fff;
 }
 
 #order-all {
-     background-color:  #f08c00;
+     background-color:  #00b4e1;
     color: #fff;
 }
 
@@ -1255,3 +1255,6 @@ a.skip-main:focus, a.skip-main:active {
     background-color: #EAF3F6;
 }
 
+.current-state {
+    font-size: calc(125%);
+}

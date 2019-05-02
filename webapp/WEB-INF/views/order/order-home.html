@@ -68,54 +68,71 @@
         <div class="container content-page" role="main" id="maincontent" tabindex="-1">
 
             <div class="row">
-                <div class=" col-md-3">
+                <div class=" col-md-2">
                     <div class="panel panel-default bucket" id="order-today">
                         <div class="panel-body">
-                            <h6>Today</h6>
-                            <h4>5/10 Delivered</h4>
+                            <span class="small">Today</span>
+                            <h1><span class="current-state">5</span>/10</h1>
+                            <span>Delivered</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="panel panel-default bucket" id="order-tomorrow">
                         <div class="panel-body">
-                            <h6>Tomorrow</h6>
-                            <h4>8/13 Confirmed</h4>
+                            <span class="small">Tomorrow</span>
+                            <h1><span class="current-state">8</span>/13</h1>
+                            <span>Confirmed</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="panel panel-default bucket" id="order-all">
                         <div class="panel-body">
-                            <h6>All</h6>
-                            <h4>10/20 Confirmed</h4>
+                            <span class="small">All</span>
+                            <h1><span class="current-state">15</span>/20</h1>
+                            <span>Confirmed</span>
                         </div>
                     </div>
                 </div>
-                 <div class="top25 col-md-3">
-                   
-                        
-                            <button class="btn btn-primary lh-button btn-block btn-lg " type="submit">
-                                    <span>Order now</span></button>
-                        
-                   
+                <div class="top25 col-md-3">
+
+
+
+
+
+                </div>
+                <div class=" col-md-3">
+
+                    <div class="pull-right">
+                        <button class="btn btn-primary lh-button " type="submit">
+                            <span>Order Cement</span></button>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="top10  pull-right">
+                        <button class="btn btn-primary lh-button  " type="submit">
+                            <span>Order Bags</span></button>
+                    </div>
+
+
+
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Today
+                            All Order Requests
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table id="today" class="table table-hover table-striped dt-responsive" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>Order #</th>
+                                            <th>Order Request #</th>
                                             <th>Material</th>
                                             <th>Status</th>
-                                            <th>Time</th>
+                                            <th>Delivery Time</th>
                                             <th>ETA</th>
                                             <th>Date</th>
                                         </tr>
