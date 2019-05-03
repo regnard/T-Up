@@ -14,6 +14,11 @@ input[type=checkbox].checkbox-large {
     padding: 0px;
 }
 
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
 .lineheight34 {
     line-height: 34px;
 }
@@ -1256,5 +1261,5 @@ a.skip-main:focus, a.skip-main:active {
 }
 
 .current-state {
-    font-size: calc(125%);
+    font-size: calc(133%);
 }

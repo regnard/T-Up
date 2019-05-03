@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LafargeHolcim</title>
+    <link rel="stylesheet" href="../../../../resources/static/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css" />
+    <link rel="stylesheet" href="../../../../resources/static/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/Footer-Dark.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/Navigation-with-Button1.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/DirectA.css" />
+    <link rel="stylesheet" href="../../../../resources/static/css/LafargeHolcim-CA.css" />
+    <link rel="icon" type="image/x-icon" href="../../../../resources/static/l-favicon_6.ico" />
+    <script src="../../../../resources/static/datatables/js/processing().js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+
+    <th:block th:fragment="htmlHeader">
+        <meta th:name="_csrf" th:content="${_csrf.token}" />
+        <meta th:name="_csrf_header" th:content="${_csrf.headerName}" />
+        <title th:text="#{title.order.newOrder}">DirectA - Order Request Edit</title>
+    </th:block>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-default navigation-clean-button">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="../../../../resources/static/img/directa-logo.png" alt="DirectA" id="lh-logo" /></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav"></ul>
+                    <p class="navbar-text navbar-right actions"> </p>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div th:fragment="content">
+        <div id="lh-band" role="banner">
+            <div class="container" id="content-block">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <h2 id="page-title">Edit Order Request</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div th:replace="fragments/common :: userShipToOptions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="fragments/common :: message-box"></div>
+
+        <div class="container content-page" role="main" id="maincontent" tabindex="-1">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="#"><i class="glyphicon glyphicon-chevron-left"></i>Return to Previous Page</a>
+                </div>
+                <div class="col-md-6 top10">
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><span>ABC Ready Mix #1234567890 - Toronto, ON</span></div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table id="recent-orders" class="table table-hover table-striped">
+                                    <tr>
+                                        <td><strong>Delivery Date</strong></td>
+                                        <td>04-20-2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Delivery Time</strong></td>
+                                        <td>Morning</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Quantity &amp; Unit of measure</strong></td>
+                                        <td>40 tons</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>PO #</strong></td>
+                                        <td>1234567890</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Notes</strong></td>
+                                        <td>Enter at east side</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+           
+        </div>
+    </div>
+
+
+    <script src="../../../../resources/static/js/jquery.min.js"></script>
+    <script src="../../../../resources/static/js/script.min.js"></script>
+    <script src="../../../../resources/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+    <th:block th:fragment="htmlBodyEnd">
+        <script>
+            function toggler(divId) {
+                $("#" + divId).toggle() {
+                    event.preventDefault();
+                };
+
+            }
+
+        </script>
+
+        <script>
+            $('#item-1').DataTable({
+                "responsive": true,
+                responsive: {
+                    details: {
+                        display: $.fn.dataTable.Responsive.display.modal({
+                            header: function(row) {
+                                var data = row.data();
+                                return 'Details for ' + data[0];
+                            }
+                        }),
+                        renderer: $.fn.dataTable.Responsive.renderer.tableAll({
+                            tableClass: 'table'
+                        })
+                    }
+                },
+                "searching": false,
+                "paging": false,
+                "info": false,
+                "sorting": false,
+                "targets": 'no-sort',
+                "bSort": false,
+                "order": [],
+                "autoWidth": false,
+                "columnDefs": [{
+                        "className": "",
+                        width: "40%",
+                        "targets": 2
+                    },
+                    {
+                        responsivePriority: 1,
+                        targets: [0, 1]
+                    },
+                    {
+                        responsivePriority: 2,
+                        targets: [2]
+                    },
+
+
+                ],
+
+
+
+            });
+
+        </script>
+
+
+
+
+    </th:block>
+
+</body>
+
+</html>
