@@ -53,11 +53,17 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <h2 id="page-title" th:utext="#{menu.Home}">Home</h2>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div th:replace="fragments/common :: userSoldToOptions"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <label class="sr-only" for="shipto-select">Selection: </label>
+                        <select id="shipto-select" class="form-control" >
+                            <option>Select Sold-To</option>
+                        </select>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div th:replace="fragments/common :: userShipToOptions"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <label class="sr-only" for="shipto-select">Selection: </label>
+                        <select id="shipto-select" class="form-control" >
+                            <option>Select Ship-To</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -89,7 +95,7 @@
                 <div class="col-md-2">
                     <div class="panel panel-default bucket" id="order-all">
                         <div class="panel-body">
-                            <span class="small">All</span>
+                            <span class="small">All Upcoming</span>
                             <h1><span class="current-state">15</span>/20</h1>
                             <span>Confirmed</span>
                         </div>
@@ -104,15 +110,15 @@
                 </div>
                 <div class=" col-md-3">
 
-                    <div class="pull-right">
-                        <button class="btn btn-primary lh-button " type="submit">
-                            <span>Order Cement</span></button>
-                    </div>
+
+                    <button class="btn btn-primary lh-button btn-block " type="submit">
+                        <span>Order Bulk</span></button>
+
                     <div class="clearfix"></div>
-                    <div class="top10  pull-right">
-                        <button class="btn btn-primary lh-button  " type="submit">
-                            <span>Order Bags</span></button>
-                    </div>
+
+                    <button class="btn btn-primary lh-button btn-block top10 bottom10 " type="submit">
+                        <span>Order Bags</span></button>
+
 
 
 
@@ -122,7 +128,7 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            All Order Requests
+                            All Upcoming Order Requests
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -135,51 +141,57 @@
                                             <th>Delivery Time</th>
                                             <th>ETA</th>
                                             <th>Date</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>1234567890</td>
+                                            <td><a href="#">1234567890</a></td>
                                             <td>Newcem Grade 80</td>
-                                            <td>En Route</td>
+                                            <td><span class="text-danger">Delayed</span></td>
                                             <td>10:00am</td>
                                             <td>45 minutes</td>
                                             <td>04/20/2019</td>
+                                            <td><span><a href="#" class='small text-muted action-link'><i class='glyphicon glyphicon-pencil'></i>&nbsp;Edit</a></span> <span><a href="#" class='small text-danger action-link'><i class='glyphicon glyphicon-remove'></i>&nbsp;Cancel</a></span></td>
                                         </tr>
                                         <tr>
-                                            <td>1234567890</td>
+                                            <td><a href="#">1234567890</a></td>
                                             <td>Newcem Grade 80</td>
                                             <td>En Route</td>
                                             <td>10:00am</td>
                                             <td>45 minutes</td>
                                             <td>04/20/2019</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>1234567890</td>
-                                            <td>Newcem Grade 80</td>
-                                            <td>En Route</td>
-                                            <td>10:00am</td>
-                                            <td>45 minutes</td>
-                                            <td>04/20/2019</td>
+                                            <td><span><a href="#" class='small text-muted action-link'><i class='glyphicon glyphicon-pencil'></i>&nbsp;Edit</a></span> <span><a href="#" class='small text-danger action-link'><i class='glyphicon glyphicon-remove'></i>&nbsp;Cancel</a></span></td>
                                         </tr>
 
                                         <tr>
-                                            <td>1234567890</td>
+                                            <td><a href="#">1234567890</a></td>
                                             <td>Newcem Grade 80</td>
                                             <td>En Route</td>
                                             <td>10:00am</td>
                                             <td>45 minutes</td>
                                             <td>04/20/2019</td>
+                                            <td><span><a href="#" class='small text-muted action-link'><i class='glyphicon glyphicon-pencil'></i>&nbsp;Edit</a></span> <span><a href="#" class='small text-danger action-link'><i class='glyphicon glyphicon-remove'></i>&nbsp;Cancel</a></span></td>
                                         </tr>
 
                                         <tr>
-                                            <td>1234567890</td>
+                                            <td><a href="#">1234567890</a></td>
                                             <td>Newcem Grade 80</td>
                                             <td>En Route</td>
                                             <td>10:00am</td>
                                             <td>45 minutes</td>
                                             <td>04/20/2019</td>
+                                            <td><span><a href="#" class='small text-muted action-link'><i class='glyphicon glyphicon-pencil'></i>&nbsp;Edit</a></span> <span><a href="#" class='small text-danger action-link'><i class='glyphicon glyphicon-remove'></i>&nbsp;Cancel</a></span></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><a href="#">1234567890</a></td>
+                                            <td>Newcem Grade 80</td>
+                                            <td>En Route</td>
+                                            <td>10:00am</td>
+                                            <td>45 minutes</td>
+                                            <td>04/20/2019</td>
+                                            <td><span><a href="#" class='small text-muted action-link'><i class='glyphicon glyphicon-pencil'></i>&nbsp;Edit</a></span> <span><a href="#" class='small text-danger action-link'><i class='glyphicon glyphicon-remove'></i>&nbsp;Cancel</a></span></td>
                                         </tr>
 
 

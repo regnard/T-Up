@@ -61,157 +61,195 @@
             <div class="row">
                 <div class="col-md-12">
                     <span>ABC Ready Mix #1234567890 - Toronto, ON</span>
-                    <div class="top15">
-                        <hr />
-                        <span><strong>Material 1:</strong> Newcem Grade 80 (<a class="small" href="#">Remove Material</a>)</span>
-                        <div class="table-responsive">
-                            <table id="item-1" class="table table-hover table-striped dt-responsive transaction-table" style="width:100%">
-                                <thead>
-                                    <tr class="row">
-                                        <th class="all">&nbsp;</th>
-                                        <th class="desktop">Bags*</th>
-                                        <th class="desktop">Product*</th>
-                                        <th class="desktop">Deliver Date*</th>
-                                        <th class="desktop">Delivery Time*</th>
-                                        <th class="desktop">P.O. #</th>
-                                        <th class="desktop">Notes</th>
-                                        <th class="desktop text-center">Remove</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="row">
-                                        <td>
-                                            <div class="top10"><strong>Load #1</strong></div>
-                                        </td>
-                                        <td>
-                                            <input type="number" class="form-control input-sm" />
-                                        </td>
-                                        <td>
-                                            <a href="#">Select Product</a>
-                                        </td>
-                                        <td>
-
-                                            <input type="date" class="form-control input-sm" value="2019-04-09" />
-
-                                        </td>
-                                        <td>
-                                            <div class=" btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
-                                                <label class="btn btn-default no-wrap">
-                                                    <input type="radio" autocomplete="off">6am-8am
-                                                </label>
-                                                <label class="btn btn-default no-wrap">
-                                                    <input type="radio" autocomplete="off">8am-10am
-                                                </label>
-                                                <label class="btn btn-default no-wrap">
-                                                    <input type="radio" autocomplete="off">11pm-1pm
-                                                </label>
-                                                <label class="btn btn-default no-wrap">
-                                                    <input type="radio" autocomplete="off">11pm-4pm
-                                                </label>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <a class="small toggler-link hidden-sm hidden-xs" id="toggle-load-1" href="#" onclick="toggler('time-load-1')">Choose a different time</a>
-
-                                            <div class="bottom10 clearfix"></div>
-                                            <div class="visible-sm visible-xs">OR</div>
-                                            <div id="time-load-1" class="time-delivery-init">
-                                                <div>
-                                                    <label>From:
-                                                        <select class="form-control input-sm">
-                                                            <option selected="true" disabled="true"></option>
-                                                            <option>7am</option>
-                                                            <option>8am</option>
-                                                            <option>9am</option>
-                                                            <option>10am</option>
-                                                            <option>11am</option>
-                                                            <option>12pm</option>
-                                                            <option>1pm</option>
-                                                            <option>2pm</option>
-                                                            <option>3pm</option>
-                                                            <option>4pm</option>
-                                                        </select>
-                                                    </label>
-
-                                                    <label>To:
-                                                        <select class="form-control input-sm">
-                                                            <option selected="true" disabled="true"></option>
-                                                            <option>8am</option>
-                                                            <option>9am</option>
-                                                            <option>10am</option>
-                                                            <option>11am</option>
-                                                            <option>12pm</option>
-                                                            <option>1pm</option>
-                                                            <option>2pm</option>
-                                                            <option>3pm</option>
-                                                            <option>4pm</option>
-                                                        </select>
-                                                    </label>
-                                                    <div>OR</div>
-                                                </div>
-                                                <div>
-                                                    <label>Specific Time:
-                                                        <div></div>
-                                                        <select class="form-control input-sm">
-                                                            <option selected="true" disabled="true"></option>
-                                                            <option>7</option>
-                                                            <option>8</option>
-                                                            <option>9</option>
-                                                            <option>10</option>
-                                                        </select>
-
-                                                        <select class="form-control input-sm">
-                                                            <option selected="true" disabled="true"></option>
-                                                            <option>00</option>
-                                                            <option>15</option>
-                                                            <option>30</option>
-                                                            <option>45</option>
-                                                        </select>
-
-                                                        <select class="form-control input-sm">
-                                                            <option selected="true" disabled="true"></option>
-                                                            <option>AM</option>
-                                                            <option>PM</option>
-
-                                                        </select>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </td>
-                                       
-                                        <td>
-
-                                            <input type="text" class="form-control input-sm" />
-
-                                        </td>
-                                        <td>
-
-                                            <input type="text" class="form-control input-sm" />
-
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="top10"><a class="text-danger" href="#"><i class="fa fa-times-circle fa-lg"></i></a></div>
-                                        </td>
-                                    </tr>
-
-
-
-                                </tbody>
-                            </table>
-                        </div>
-                        <button class="btn btn-sm btn-primary lh-button" type="submit">
-                            <span><i class="fa fa-plus"></i> Add Another Load</span></button>
-                    </div>
-
-
 
                 </div>
-                <div class="top30 col-md-12 col-sm-12 col-xs-12 ">
-                    <button class="btn btn-primary lh-button" type="submit">
-                        <span>Continue</span></button> &nbsp;
-                    <button class="btn btn-default" type="button" onclick="self.location='../home';">
-                        <span>Cancel</span></button>
+                <div class="col-md-12 top10">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span><strong>Load 1</strong> (<a class="small" href="#">Remove Load</a>)</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <table class="table table-hover table-striped small">
+                                        <tr>
+                                            <th class="col-md-2"># of Bags*</th>
+                                            <th class="col-md-8">Material</th>
+                                            <th class="col-md-2 text-center">Remove</th>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="number" class="form-control input-sm" value="40" /></td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target="#myModal">Select Material</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="top5"><a class="text-danger" href="#"><i class="fa fa-times-circle fa-lg"></i></a></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="number" class="form-control input-sm" value="40" /></td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target="#myModal">Select Material</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="top5"><a class="text-danger" href="#"><i class="fa fa-times-circle fa-lg"></i></a></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <button class="btn btn-sm btn-primary lh-button bottom10" type="submit">
+                                        <span><i class="fa fa-plus"></i> Add Another Bag</span></button>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped small">
+                                            <tr>
+                                                <td><strong>Delivery Date*</strong></td>
+                                                <td><input type="date" class="form-control input-sm" value="2019-04-09" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Delivery Time*</strong></td>
+                                                <td>
+                                                    <div class=" btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-default no-wrap">
+                                                            <input type="radio" autocomplete="off">6am-8am
+                                                        </label>
+                                                        <label class="btn btn-default no-wrap">
+                                                            <input type="radio" autocomplete="off">8am-10am
+                                                        </label>
+                                                        <label class="btn btn-default no-wrap">
+                                                            <input type="radio" autocomplete="off">11pm-1pm
+                                                        </label>
+                                                        <label class="btn btn-default no-wrap">
+                                                            <input type="radio" autocomplete="off">11pm-4pm
+                                                        </label>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                    <a class="small toggler-link hidden-sm hidden-xs" id="toggle-load-1" href="#" onclick="toggler('time-load-1')">Choose a different time</a>
+
+
+                                                    <div class="bottom10 clearfix"></div>
+
+                                                    <div id="time-load-1" class="time-delivery-init">
+                                                        <div>OR</div>
+                                                        <div>
+                                                            <label>From:
+                                                                <select class="form-control input-sm">
+                                                                    <option selected="true" disabled="true">Start Time</option>
+                                                                    <option>7am</option>
+                                                                    <option>8am</option>
+                                                                    <option>9am</option>
+                                                                    <option>10am</option>
+                                                                    <option>11am</option>
+                                                                    <option>12pm</option>
+                                                                    <option>1pm</option>
+                                                                    <option>2pm</option>
+                                                                    <option>3pm</option>
+                                                                    <option>4pm</option>
+                                                                </select>
+                                                            </label>
+
+                                                            <label>To:
+                                                                <select class="form-control input-sm">
+                                                                    <option selected="true" disabled="true">End Time</option>
+                                                                    <option>8am</option>
+                                                                    <option>9am</option>
+                                                                    <option>10am</option>
+                                                                    <option>11am</option>
+                                                                    <option>12pm</option>
+                                                                    <option>1pm</option>
+                                                                    <option>2pm</option>
+                                                                    <option>3pm</option>
+                                                                    <option>4pm</option>
+                                                                </select>
+                                                            </label>
+                                                            <div>OR</div>
+                                                        </div>
+                                                        <div>
+                                                            <label>Specific Time:
+
+                                                                <select class="form-control input-sm">
+                                                                    <option selected="true" disabled="true">HH</option>
+                                                                    <option>7</option>
+                                                                    <option>8</option>
+                                                                    <option>9</option>
+                                                                    <option>10</option>
+                                                                </select>
+
+                                                                <select class="form-control input-sm">
+                                                                    <option selected="true" disabled="true">MM</option>
+                                                                    <option>00</option>
+                                                                    <option>15</option>
+                                                                    <option>30</option>
+                                                                    <option>45</option>
+                                                                </select>
+
+                                                                <select class="form-control input-sm">
+                                                                    <option selected="true" disabled="true">AM/PM</option>
+                                                                    <option>AM</option>
+                                                                    <option>PM</option>
+
+                                                                </select>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><strong>PO #</strong></td>
+                                                <td><input type="text" class="form-control input-sm" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Notes</strong></td>
+                                                <td> <input type="text" class="form-control input-sm" /></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <button class="btn btn-sm btn-primary lh-button" type="submit">
+                <span><i class="fa fa-plus"></i> Add Another Load</span></button>
+
+            <div class="top30  ">
+                <button class="btn btn-primary lh-button" type="submit">
+                    <span>Continue</span></button> &nbsp;
+                <button class="btn btn-default" type="button" onclick="self.location='../home';">
+                    <span>Cancel</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
+
         </div>
     </div>
 
